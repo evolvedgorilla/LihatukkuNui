@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="MEATS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="MEAT">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NAME" type="xs:string" />
+							<xs:element name="TYPE" type="xs:string" />
+							<xs:element name="ORIGIN" type="xs:string" />
+							<xs:element name="MARBLING" type="xs:unsignedByte" />
+							<xs:element name="ORGANIC" type="xs:string" />
+							<xs:element name="PICTURE" type="xs:string" />
+							<xs:element name="FLAG" type="xs:string" />
+							<xs:element name="SELLER" type="xs:string" />
+						</xs:sequence>
+						<xs:attribute name="ID" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

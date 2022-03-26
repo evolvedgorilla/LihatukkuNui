@@ -1,0 +1,58 @@
+﻿<Window x:Class="LihatukkuNui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LihatukkuNui"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="550" Background="#3C3C3C">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="28" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        
+        <TextBlock x:Name="Lihatukku_Nui" FontSize="18" Foreground="Red" Grid.Column="1" Margin="42,0,48.667,0"  >Lihatukku Nui</TextBlock>
+        <ListBox x:Name="lstLihojenID"
+                 Grid.Row="1" Grid.Column="0" Background="Beige"
+                 Height="300" Width="80" SelectionChanged="lstLihojenID_SelectionChanged"/>
+        <StackPanel Grid.Row="1" Grid.Column="1"  Grid.RowSpan="2">
+            <Label Name="lblNimi" Margin="10"
+               Height="50" Width="180" Background="NavajoWhite"/>
+            <Label Name="lblTyyppi" Margin="10"
+               Height="50" Width="180" Background="NavajoWhite"/>
+            <Label Name="lblMaa" Margin="10"
+               Height="50" Width="180" Background="NavajoWhite"/>
+            <Label Name="lblMarmori" Margin="10"
+               Height="50" Width="180" Background="NavajoWhite"/>
+            <RadioButton x:Name="rdbLuomu"
+                         Height="20" Width="120"
+                         Content="Organic"
+                         Margin="7"/>
+            <RadioButton x:Name="rdbEiLuomu"
+                         Height="20" Width="120"
+                         Content="Not organic"
+                         Margin="7"/>
+            <Label Name="lblMyyjä" Margin="10"
+               Height="50" Width="180" Background="NavajoWhite"/>
+        </StackPanel>
+        <Image x:Name="imgLiha" 
+               VerticalAlignment="Top"
+               Height="200" Width="250"
+               Grid.Row="1" Grid.Column="2"
+               Margin="7" Stretch="Fill"/>
+        <Image x:Name="imgLippu" 
+               VerticalAlignment="Bottom"
+               Height="200" Width="250"
+               Grid.Row="1" Grid.Column="2"
+               Margin="7" Stretch="Fill"/>
+
+    </Grid>
+</Window>
